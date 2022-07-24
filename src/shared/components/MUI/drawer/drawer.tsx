@@ -15,13 +15,14 @@ import { updateEvent } from "../../../reducers/event.reducer";
 const BetDrawer:React.FC = () => {
     const dispatch = useDispatch()
     const [open, setOpen] = useState(false);
-    const allEvents = useSelector(
+    const allBets = useSelector(
       (state: any) => state.bets,
       shallowEqual,
     );
     const getList = () => (
       <div style={{ width: 250 }} onClick={() => setOpen(false)}>
-        {allEvents.map((item: any, index: number) => (
+        <p>Your Bets</p>
+        {allBets.map((item: any, index: number) => (
           <ListItem  sx={{
             display:'flex',
             alignItems:'center',
