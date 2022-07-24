@@ -2,8 +2,8 @@ import {eventList, selection} from '../types'
 
 export const eventReducer = (state = [], action: any) => {
     switch (action.type) {
-        case '@event/init': return action.payload
-        case '@event/bet': return action.payload
+        case '@event/init': return action.payload;
+        case '@event/bet': return action.payload;
         case '@event/updateBet':
             /*
               This is not of complexity (n x m x d) it is of complexity (n + m + d).
@@ -21,31 +21,30 @@ export const eventReducer = (state = [], action: any) => {
                                 if (selection.id === action.payload.id) {
                                     selection.isAposted = !selection.isAposted
                                 }
-                                return selection
+                                return selection;
                             })
                         }
-                        return market
+                        return market;
                     })
                 }
                 return event
             })
-            console.log(temporalState)
-            return [...temporalState]
-        default: return state
+            return [...temporalState];
+        default: return state;
     }
 }
 
 export const initEvent = (events: eventList[]) => {
     return {
         type: '@event/init',
-        payload: events
+        payload: events,
     }
 }
 
 export const updateEvent = (bet: selection) => {
     return {
         type: '@event/updateBet',
-        payload: bet
+        payload: bet,
     }
 }
 

@@ -1,11 +1,67 @@
+@use '../../../assets/scss/variables' as *;
+
+.btn, .btnAposted {
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 20px;
+  min-width: 8.5rem;
+  transition: color 0.3s ease;
+  background: $Purple;
+  padding: 0.5em;
+}
 .btn {
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    height: 3.25rem;
-    line-height: 20px;
-    min-width: 8.5rem;
-    transition: color 0.3s ease;
+ 
+  &.aposted {
+    background:$Green;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  p {
+    color: $White;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  p:first-child{
+    font-weight: 300 ;
+  }
+
+  p:last-child{
+    font-weight: 800;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background: $DarkGrey;
+  }
+}
+
+.btnAposted {
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  p {
+    color: $White;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  p:first-child{
+    font-weight: 300 ;
+  }
+
+  p:last-child{
+    font-weight: 800;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background: $Green
+  }
 }

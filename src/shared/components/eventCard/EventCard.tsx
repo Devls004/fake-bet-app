@@ -31,7 +31,10 @@ const EventCard: React.FC<selection> = ({ event_id, market_id, id, name, price, 
       <input type="hidden" name="id" value={id} />
       <input type="hidden" name="market_id" value={market_id} />
       <input type="hidden" name="event_id" value={event_id} />
-      <button disabled={isAposted || isDisabled} className={styles.btn}>
+      <button
+        disabled={isAposted || isDisabled}
+        className={`${isAposted ? styles.btnAposted : styles.btn}`}
+      >
         <p>{name}</p>
         <p>{price}</p>
       </button>

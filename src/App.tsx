@@ -6,8 +6,8 @@ import { useEffect } from 'react';
 import { eventGetter } from './shared/actions/event.action';
 import { initEvent } from './shared/reducers/event.reducer';
 //Components
-import MarketSection from './shared/components/marketSection';
-import BetDrawer from './shared/components/MUI/drawer/drawer';
+import Header from './shared/components/header';
+import EventSection from './shared/components/eventSection';
 //Types
 import {eventListId} from './shared/types'
 
@@ -25,19 +25,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <BetDrawer></BetDrawer>
-      <header className="App-header">
-        {allEvents.map((event:any) => (
-          <div key={event.id}>
-            <p>{event.name}</p>
-              {event.markets.map((market:any)=> (
-                <div key={market.id}>
-                  <MarketSection event_id={event.id} id={market.id} name={market.name} selections={market.selections}/>
-                </div>
-            ))}
-          </div>
+      <Header />
+      <div className="App-header">
+        {allEvents.map((event:eventListId) => (
+          <EventSection  key={event.id} event={event} />
         ))}
-      </header>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ This is a Fakebet demo! Your new favorite fake betting site.
 After cloning the repository, you must install the dependencies with the following command:
 
 ```sh
-npm install --production
+npm install
 ```
 Then in the root we must create an .env file to create our application variables.
 

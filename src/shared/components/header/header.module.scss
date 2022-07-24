@@ -1,0 +1,39 @@
+@use '../../../assets/scss/variables' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    background: $LightGrey;
+
+
+
+    @media screen and (min-width: $desktop) {
+        background: $MidGrey;
+    }
+
+    p {
+        color: $White;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.15em;
+        text-align: left;
+    }
+}
+
+.wrapperTitle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
+}

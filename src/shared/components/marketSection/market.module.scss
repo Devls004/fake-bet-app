@@ -1,0 +1,37 @@
+@use '../../../assets/scss/variables' as *;
+
+.wrapper {
+    width: 700px;
+    padding: 0.5em;
+    >p{
+        font-size: 16px;
+        color: $InterGrey;
+        margin: 0;
+        text-align: start;
+    }
+    @media screen and (min-width: $desktop) {
+        // width: 50%;
+        >p{
+            font-size: 20px;
+            color: $MidGrey;
+            font-weight: 400;
+        }
+    }
+}
+.wrapper:nth-child(2) {
+    border-top: 2px solid $LightGrey;
+
+    @media screen and (min-width: $desktop) {
+        border: none;
+        border-left:4px solid $MidGrey;
+    }
+}
+
+.wrapperEventsCard {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
