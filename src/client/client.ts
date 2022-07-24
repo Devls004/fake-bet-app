@@ -1,4 +1,5 @@
 import axios from 'axios';
+//Config singleton
 import { API_URL } from '../main.config';
 
 export default axios.create({
