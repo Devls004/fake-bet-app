@@ -7,8 +7,8 @@ import Button from '@mui/material/Button';
 //Events
 import { useState } from "react";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
-import { deleteBet } from '../../../../reducers/bet.reducer';
-import { updateEvent } from "../../../../reducers/event.reducer";
+import { deleteBet } from '../../../reducers/bet.reducer';
+import { updateEvent } from "../../../reducers/event.reducer";
 
 
 

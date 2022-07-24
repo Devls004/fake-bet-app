@@ -13,6 +13,7 @@ export interface marketBet {
     name: string,
     selections: selectionBet[],
 }
+
 export interface selectionBet {
     id: string,
     name: string,
@@ -30,11 +31,24 @@ export interface selection {
     isDisabled?: boolean;
 }
 
+// ID types
+
+export interface marketBetID {
+    id: string,
+    name: string,
+    selections: selectionID[],
+}
+
 export interface marketID {
     id: string;
     name?:string;
     selections: selectionID[];
     event_id: string;
+}
+export interface eventListId {
+    id: string,
+    name: string,
+    markets: marketBetID[],
 }
 export interface selectionID {
     id: string;
