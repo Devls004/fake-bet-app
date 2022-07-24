@@ -1,4 +1,4 @@
-import {bet} from '../types'
+import { bet } from '../types'
 
 export const betVariable: bet = {
     name: 'Alemania VS Brasil',

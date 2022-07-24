@@ -27,4 +27,19 @@ export interface selection {
     name: string;
     price: number;
     isAposted?: boolean;
+    isDisabled?: boolean;
+}
+
+export interface marketID {
+    id: string;
+    name?:string;
+    selections: selectionID[];
+    event_id: string;
+}
+export interface selectionID {
+    id: string;
+    name: string;
+    price: number;
+    isAposted?: boolean;
+    isDisabled?: boolean;
 }
